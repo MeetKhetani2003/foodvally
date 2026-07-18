@@ -45,7 +45,7 @@ const team = [
     name: 'Chef David Chen',
     role: 'Head of International Cuisine',
     desc: 'Expert in Japanese, Chinese, and Thai cuisines with 15 years of experience at five-star hotels across Asia.',
-    img: 'https://images.pexels.com/photos/36430150/pexels-photo-36430150.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=500&w=400',
+    img: 'https://images.pexels.com/photos/3887985/pexels-photo-3887985.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=500&w=400',
   },
 ];
 
@@ -62,7 +62,7 @@ export default function About() {
       {/* Hero */}
       <section className="relative overflow-hidden" style={{ height: '70vh', minHeight: '500px' }}>
         <img
-          src="https://images.pexels.com/photos/36430153/pexels-photo-36430153.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=800&w=1600"
+          src="https://images.pexels.com/photos/3887985/pexels-photo-3887985.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=800&w=1600"
           alt="Our Story"
           className="w-full h-full object-cover"
         />

@@ -52,7 +52,7 @@ const services = [
     title: 'Luxury Private Dining',
     subtitle: 'Intimacy Perfected',
     desc: 'For the most intimate celebrations, our private dining experiences bring the finest restaurant quality directly to your home, villa, or private venue. A personal chef, bespoke menu, and impeccable service await.',
-    img: 'https://images.pexels.com/photos/33033776/pexels-photo-33033776.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1200',
+    img: 'https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1200',
     features: ['Private chef experience', 'Custom tasting menus', 'Wine & mocktail pairing', 'Intimate settings'],
     reverse: true,
   },

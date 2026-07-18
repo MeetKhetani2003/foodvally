@@ -7,14 +7,14 @@ import { useRef } from 'react';
 import MarqueeBanner from '../components/MarqueeBanner';
 
 const HERO_BG = 'https://images.pexels.com/photos/19986452/pexels-photo-19986452.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1080&w=1920';
-const ABOUT_IMG = 'https://images.pexels.com/photos/36430153/pexels-photo-36430153.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=700';
+const ABOUT_IMG = 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=700';
 const SERVICE_1 = 'https://images.pexels.com/photos/17001844/pexels-photo-17001844.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=800&w=1200';
 const SERVICE_2 = 'https://images.pexels.com/photos/37828118/pexels-photo-37828118.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=800&w=1200';
 const SERVICE_3 = 'https://images.pexels.com/photos/36430149/pexels-photo-36430149.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=800&w=1200';
 const CUISINE_1 = 'https://images.pexels.com/photos/35420072/pexels-photo-35420072.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=500';
 const CUISINE_2 = 'https://images.pexels.com/photos/29486069/pexels-photo-29486069.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=500';
 const CUISINE_3 = 'https://images.pexels.com/photos/32149261/pexels-photo-32149261.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=500';
-const CUISINE_4 = 'https://images.pexels.com/photos/24246114/pexels-photo-24246114.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=500';
+const CUISINE_4 = 'https://images.pexels.com/photos/674574/pexels-photo-674574.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=500';
 const GALLERY_1 = 'https://images.pexels.com/photos/4717550/pexels-photo-4717550.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900';
 const GALLERY_2 = 'https://images.pexels.com/photos/29098355/pexels-photo-29098355.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900';
 const GALLERY_3 = 'https://images.pexels.com/photos/35985243/pexels-photo-35985243.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900';

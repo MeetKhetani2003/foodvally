@@ -87,7 +87,7 @@ const articles = [
     title: 'Rajasthani Cuisine: Honouring Heritage on the Luxury Table',
     category: 'Cuisine Stories',
     excerpt: 'How we preserve the ancient culinary traditions of Rajasthan while presenting them with contemporary luxury standards worthy of the finest dining tables.',
-    img: 'https://images.pexels.com/photos/36430153/pexels-photo-36430153.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=900',
+    img: 'https://images.pexels.com/photos/3887985/pexels-photo-3887985.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=900',
     date: 'September 2024',
     readTime: '6 min read',
     featured: false,

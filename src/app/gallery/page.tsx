@@ -25,7 +25,7 @@ const allImages = [
   { id: 3, src: 'https://images.pexels.com/photos/35420072/pexels-photo-35420072.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=600', alt: 'Gourmet Plating', category: 'Cuisine', span: 'normal' },
   { id: 4, src: 'https://images.pexels.com/photos/17001844/pexels-photo-17001844.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900', alt: 'Wedding Hall', category: 'Venues', span: 'tall' },
   { id: 5, src: 'https://images.pexels.com/photos/29486069/pexels-photo-29486069.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900', alt: 'Luxury Buffet', category: 'Buffets', span: 'normal' },
-  { id: 6, src: 'https://images.pexels.com/photos/36430153/pexels-photo-36430153.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=700', alt: 'Chef Plating', category: 'Chefs', span: 'normal' },
+  { id: 6, src: 'https://images.pexels.com/photos/3887985/pexels-photo-3887985.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=700', alt: 'Chef Plating', category: 'Chefs', span: 'normal' },
   { id: 7, src: 'https://images.pexels.com/photos/34342527/pexels-photo-34342527.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=800&w=900', alt: 'Beachfront Wedding', category: 'Destination', span: 'wide' },
   { id: 8, src: 'https://images.pexels.com/photos/29098355/pexels-photo-29098355.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=800', alt: 'Dessert Table', category: 'Desserts', span: 'normal' },
   { id: 9, src: 'https://images.pexels.com/photos/16935916/pexels-photo-16935916.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=800&w=900', alt: 'Table Setting', category: 'Styling', span: 'tall' },

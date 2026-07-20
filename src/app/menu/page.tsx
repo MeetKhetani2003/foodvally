@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
 import BookingModal from '../../components/BookingModal';
+import { rawMenuData } from '../../utils/menuData';
 
 function FadeSection({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -21,120 +22,95 @@ function FadeSection({ children, delay = 0, className = '' }: { children: React.
   );
 }
 
-const categories = [
-  'All',
-  'Soups & Refreshments',
-  'Starters & Chaat',
-  'Live Counters',
-  'Regional Indian',
-  'Main Course',
-  'Breads & Rice',
-  'Desserts',
+const menuCategories = [
+  {
+    id: 1,
+    category: "Juice & Mocktails",
+    imageUrl: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=500"
+  },
+  {
+    id: 2,
+    category: "Soups",
+    imageUrl: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=500"
+  },
+  {
+    id: 3,
+    category: "Starters",
+    imageUrl: "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=500"
+  },
+  {
+    id: 4,
+    category: "Chaat & Cold Counters",
+    imageUrl: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500"
+  },
+  {
+    id: 5,
+    category: "Back Dish",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEI6YwGajUccaEGzmvrDZYeHDx2cg9huoE-tsfE_TLGhHZ4dyTGIUjZeo&s=10"
+  },
+  {
+    id: 6,
+    category: "World Vision - Live Counters",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNoiK3bDBrBTxncqKQDhP6sgVzc1EkbMr7IS_N56yerhPu9G2WW_WtE-k&s=10"
+  },
+  {
+    id: 7,
+    category: "Regional Indian Counters",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTusdAqOo-f7OSRZWFVA26zK5CpFAATj3H-B5CqREC9ZIv7Q63pJZr3uUQ&s=10"
+  },
+  {
+    id: 8,
+    category: "Farsan",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN5eJq0Bi3JnHivI89NL3hC1ydcgd5rFd0mxcoMh9Of1bw58V3eUo_UuI&s=10"
+  },
+  {
+    id: 9,
+    category: "Sweets",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQASUi7Bb6G6eigEfE9-jK31voua-eQ0oxDLnP5lC7pxA&s=10"
+  },
+  {
+    id: 10,
+    category: "Vegetables",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlPceYFgYygDTr3tnqkZqrfJNZMIGmJsGew00PM04a48gI3N2JgylmoR-X&s=10https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ082F34z6ZrFjFwFn6WHTmIUV8Bv2VIWUAeLz9FpCRQ464b_RLMl_R5O4&s=10"
+  },
+  {
+    id: 11,
+    category: "Indian Breads",
+    imageUrl: "https://static.toiimg.com/thumb/msid-117277088,width-1280,height-720,resizemode-4/117277088.jpg"
+  },
+  {
+    id: 12,
+    category: "Dal & Rice",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgNP8YvwctUcXU0dhGzfFw9VbuSEhZIFYRpMPL-SEKRNXwPoCJy3df-FY&s=10"
+  },
+  {
+    id: 13,
+    category: "Accompaniments",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGPmVNXLk5KgFb_pMxJWExrUCR0QvkTpO9W1x-r6DpokAEJEIAb8tRjpqt&s=10"
+  },
+  {
+    id: 14,
+    category: "Desserts",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB6hFjQxG_NPBbqKFmEPzMe6WI_c-wEcooeFm7_4dB13HiDOBrCooU_k_p&s=10"
+  }
 ];
 
-const cuisineData = [
-  {
-    category: 'Soups & Refreshments',
-    title: 'Juices & Coolers',
-    subtitle: 'Fresh & Vibrant',
-    img: 'https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900',
-    desc: 'A curated selection of fresh juices and coolers. The perfect refreshing start to your luxury culinary experience.',
-    items: ['Pineapple Juice', 'Green Grapes & Kiwi Juice', 'Kiwi Margherita', 'Blue Lagoon', 'Ginger & Mint Cooler', 'Fruit Punch', 'Orange Tarana', 'Pina Colada'],
-  },
-  {
-    category: 'Soups & Refreshments',
-    title: 'Luxury Soups',
-    subtitle: 'Warm Beginnings',
-    img: 'https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900',
-    desc: 'From comforting clear soups to rich cappuccinos, our soup station offers a warm, elegant beginning to the feast.',
-    items: ['Tomato Coriander Soup', 'Mexican Tortilla Soup', 'Bouillabaisse French Soup', 'Tom Yam Soup', 'Cheese Corn Tomato Soup', 'Broccoli Almond Soup', 'Potato Leek Soup', 'Roasted Tomato Bell Pepper Soup'],
-  },
-  {
-    category: 'Starters & Chaat',
-    title: 'Mobile & Regular Starters',
-    subtitle: 'Bite-sized Perfection',
-    img: 'https://images.pexels.com/photos/2089711/pexels-photo-2089711.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900',
-    desc: 'Delicate, artistic, and incredibly flavourful. Our starters roam the venue or stand ready at dedicated counters.',
-    items: ['Hungarian Potatoes', 'Paneer Tikka in Pita Pocket', 'Thai Lettuce Wraps', 'Barbequed Paneer Teppanyaki', 'Vietnamese Roll', 'Cheese Fondue', 'Mexican Quesadilla', 'Potato Rosti'],
-  },
-  {
-    category: 'Starters & Chaat',
-    title: 'Cold & Hot Chaat',
-    subtitle: 'Street Food Elevated',
-    img: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900',
-    desc: 'The nostalgic flavours of India\'s beloved street food, reimagined with premium ingredients and impeccable hygiene.',
-    items: ['Kalkatti Pan Chaat', 'Navratna Rajbhog Chaat', 'Fresh Fruit Papadi Chaat', 'Papdi Chat', 'Aloo Tikki Chaat', 'Modi Nagar ki Tikki', 'Pani Puri', 'Jaipuri Chilla'],
-  },
-  {
-    category: 'Main Course',
-    title: 'Farsan',
-    subtitle: 'Traditional Savouries',
-    img: 'https://images.pexels.com/photos/331107/pexels-photo-331107.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900',
-    desc: 'Fried, steamed, and tawa-cooked — an authentic spread of traditional farsan that brings the true taste of Gujarat.',
-    items: ['Tirangi Patties', 'Pyaaz Kachori', 'Ravioli Pasta with Tar Tar', 'Hungarian Potato', 'Patra', 'Khandvi', 'Lilva na Ghughra', 'Corn Samosa'],
-  },
-  {
-    category: 'Main Course',
-    title: 'Indian Vegetables',
-    subtitle: 'Hearty & Flavourful',
-    img: 'https://images.pexels.com/photos/1143754/pexels-photo-1143754.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900',
-    desc: 'A magnificent selection of Punjabi, Gujarati, and regional Indian vegetable preparations, cooked to perfection.',
-    items: ['Paneer Patiyala', 'Methi Malai Matar Paneer', 'Punjabi Chhole', 'Surti Masala Undhiya', 'Turiya Patra Vatana', 'Hyderabadi Potato', 'Tawa Sabji', 'Green Undhiyu'],
-  },
-  {
-    category: 'Breads & Rice',
-    title: 'Indian Breads',
-    subtitle: 'Fresh from the Tandoor',
-    img: 'https://images.pexels.com/photos/1095550/pexels-photo-1095550.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900',
-    desc: 'From paper-thin roomali rotis to rich, stuffed parathas, our bread station serves them fresh and hot.',
-    items: ['Masala Puri', 'Rumali Roti', 'Baajri na Rotla', 'Cheese Paneer Paratha', 'Pudina Naan', 'Amritsari Kulcha', 'Baby Butter Naan', 'Biscuit Bhakhri'],
-  },
-  {
-    category: 'Breads & Rice',
-    title: 'Dal, Rice & Kadhi',
-    subtitle: 'The Soul of the Meal',
-    img: 'https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900',
-    desc: 'The comforting foundation of Indian dining, featuring aromatic biryanis, perfectly tempered dals, and traditional kadhis.',
-    items: ['Dal Makhani', 'Gujarati Dal', 'Hyderabadi Biryani', 'Damfuk Biryani', 'Jeera Rice', 'Taj Laving Rice', 'Gujarati Kadhi', 'Rajasthani Kadhi'],
-  },
-  {
-    category: 'Accompaniments',
-    title: 'Salads & Accompaniments',
-    subtitle: 'Fresh & Crisp',
-    img: 'https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900',
-    desc: 'An array of fresh green salads, fruit-based salads, raitas, pickles, and crisp papads to complement your meal.',
-    items: ['Green Garden Kitchen Salad', 'Mexican Salad', 'Fruit Bolar Salad', 'Mix Fruit Raita', 'Khajur Palak Raita', 'Mix Panjabi Achar', 'Masala Papad', 'Cheese Mayonnaise'],
-  },
-  {
-    category: 'Desserts',
-    title: 'Luxury Sweets & Desserts',
-    subtitle: 'The Grand Finale',
-    img: 'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900',
-    desc: 'A breathtaking conclusion to your feast. Traditional Indian sweets, modern desserts, and an artisan Mukhwas counter.',
-    items: ['Strawberry Sandesh', 'Pista Samosa', 'Dryfruit Shrikhand', 'Sitafal Basundi', 'Ghever Rabdi', 'Hot Brownie', 'Ice-Cream', 'Pan Shots'],
-  },
-  {
-    category: 'Live Counters',
-    title: 'World Vision (International)',
-    subtitle: 'Global Flavours',
-    img: 'https://images.pexels.com/photos/674574/pexels-photo-674574.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900',
-    desc: 'A passport to global cuisine. Live stations featuring the best of Italian, Chinese, Japanese, Lebanese, and Mexican culinary arts.',
-    items: ['Italian Pasta', 'Thin Crust Pizza', 'Manchurian Noodles', 'Avocado Sushi', 'Falafel & Hummus', 'Thai Red Curry', 'Mexican Tacos', 'Vegetable Momos'],
-  },
-  {
-    category: 'Regional Indian',
-    title: 'Pan-Indian Live Stations',
-    subtitle: 'Heritage on a Plate',
-    img: 'https://images.pexels.com/photos/331107/pexels-photo-331107.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=900',
-    desc: 'Authentic regional experiences bringing the true essence of Panjabi Dhaba, Rajasthani, Kathiyawadi, and South Indian cuisines.',
-    items: ['Sarson da Saag & Makki di Roti', 'Dal Baati Churma', 'Kathiyawadi Khichdi', 'Jodhpuri Dosa', 'Medu Vada', 'Appam', 'Amritsari Chhole Kulcha', 'Bajre Ka Rotla'],
-  },
-];
+const categories = ['All', ...menuCategories.map(c => c.category)];
+
+// Map the provided menu categories with the rawMenuData to dynamically create cuisineData
+const cuisineData = menuCategories.map(cat => ({
+  category: cat.category,
+  title: cat.category,
+  subtitle: 'Authentic & Exquisite',
+  img: cat.imageUrl,
+  desc: `Explore our premium selection of ${cat.category}. Crafted with authentic recipes to elevate your culinary experience.`,
+  items: rawMenuData[cat.category as keyof typeof rawMenuData] || []
+}));
 
 export default function Menu() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [selectedItem, setSelectedItem] = useState<typeof cuisineData[0] | null>(null);
-  
+
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [bookingService, setBookingService] = useState('');
 
@@ -262,14 +238,20 @@ export default function Menu() {
                       </p>
 
                       {/* Items */}
-                      <div className="grid grid-cols-2 gap-y-3 gap-x-6 mb-10">
-                        {cuisine.items.map((item, j) => (
+                      <div className="grid grid-cols-2 gap-y-3 gap-x-6 mb-6">
+                        {cuisine.items.slice(0, 8).map((item, j) => (
                           <div key={j} className="flex items-center gap-2">
                             <div className="w-4 h-px" style={{ background: 'rgba(201,169,110,0.4)' }} />
-                            <span className="font-inter text-stone text-xs">{item}</span>
+                            <span className="font-inter text-stone text-xs truncate" title={item}>{item}</span>
                           </div>
                         ))}
                       </div>
+
+                      {cuisine.items.length > 8 && (
+                        <p className="font-inter text-gold text-xs italic mb-8" style={{ opacity: 0.8 }}>
+                          + {cuisine.items.length - 8} more items available in full menu
+                        </p>
+                      )}
 
                       <button
                         onClick={() => setSelectedItem(cuisine)}
@@ -316,7 +298,7 @@ export default function Menu() {
                 <h3 className="font-playfair text-ivory text-3xl mb-2">{selectedItem.title}</h3>
                 <p className="font-cormorant text-gold mb-4" style={{ fontSize: '18px', fontStyle: 'italic' }}>{selectedItem.subtitle}</p>
                 <p className="font-inter text-stone text-xs mb-8" style={{ lineHeight: 2 }}>{selectedItem.desc}</p>
-                <div className="grid grid-cols-2 gap-3 mb-8">
+                <div className="grid grid-cols-2 gap-3 mb-8 overflow-y-auto" style={{ maxHeight: '40vh', paddingRight: '8px' }}>
                   {selectedItem.items.map((item, i) => (
                     <div key={i} className="flex items-center gap-2">
                       <span className="text-gold text-xxs">✦</span>

@@ -26,7 +26,7 @@ const events = [
     type: 'Luxury Weddings',
     tagline: 'The Celebration of a Lifetime',
     desc: 'A wedding is the most sacred celebration in Indian culture — and we treat it as such. Our wedding catering teams work months in advance to create a multi-day culinary experience that honours the magnitude of this occasion. Every meal, from the mehendi morning to the grand reception night, is a curated masterpiece.',
-    img: 'https://images.pexels.com/photos/19986452/pexels-photo-19986452.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400',
+    img: 'https://images.unsplash.com/photo-1583939411023-14783179e581?auto=format&fit=crop&h=900&w=1400&q=80',
     stats: [
       { num: '500+', label: 'Weddings Executed' },
       { num: '5000+', label: 'Max Guest Count' },
@@ -37,7 +37,7 @@ const events = [
     type: 'Royal Receptions',
     tagline: 'Grandeur Without Equal',
     desc: 'Receptions demand spectacle. Our royal reception packages transform any venue into a palace of culinary magnificence. Elaborate multi-counter setups, premium décor coordination, themed food stations, and a service team dedicated to ensuring every guest experiences royalty.',
-    img: 'https://images.pexels.com/photos/4717550/pexels-photo-4717550.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400',
+    img: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&h=900&w=1400&q=80',
     stats: [
       { num: '300+', label: 'Royal Events' },
       { num: '100+', label: 'Cuisines Offered' },
@@ -49,7 +49,7 @@ const events = [
     type: 'Corporate Events',
     tagline: 'Where Business Meets Excellence',
     desc: 'Your corporate event is an expression of your company\'s identity. Whether it\'s an annual gala for 3000 employees or an intimate board dinner for 20, we bring the same unwavering attention to detail, quality, and service that your brand deserves.',
-    img: 'https://images.pexels.com/photos/36766881/pexels-photo-36766881.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400',
+    img: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&h=900&w=1400&q=80',
     stats: [
       { num: '400+', label: 'Corporate Events' },
       { num: '50+', label: 'Fortune Companies' },
@@ -60,7 +60,7 @@ const events = [
     type: 'Destination Weddings',
     tagline: 'Love Knows No Boundaries',
     desc: 'From the pink palaces of Jaipur to the sun-kissed beaches of Goa, from the misty hills of Mussoorie to international destinations, our destination wedding team travels wherever your love story takes you. We handle every culinary detail, no matter the location.',
-    img: 'https://images.pexels.com/photos/34342527/pexels-photo-34342527.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400',
+    img: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&h=900&w=1400&q=80',
     stats: [
       { num: '150+', label: 'Destination Events' },
       { num: '20+', label: 'Cities Served' },
@@ -72,7 +72,7 @@ const events = [
     type: 'Private Celebrations',
     tagline: 'Intimate and Extraordinary',
     desc: 'For the most personal moments — milestone birthdays, anniversaries, family reunions, and intimate celebrations — we create bespoke experiences that feel both deeply personal and utterly magnificent.',
-    img: 'https://images.pexels.com/photos/17001844/pexels-photo-17001844.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400',
+    img: 'https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&h=900&w=1400&q=80',
     stats: [
       { num: '600+', label: 'Private Events' },
       { num: '10', label: 'Min Guest Count' },
@@ -83,7 +83,7 @@ const events = [
     type: 'Festival Events',
     tagline: 'Culture in Every Bite',
     desc: 'Festival events carry the weight of tradition and the joy of community. From Diwali galas to Navratri feasts, from Holi celebrations to Eid dinners, we bring authentic festive cuisines to life with modern luxury and deep cultural respect.',
-    img: 'https://images.pexels.com/photos/37828118/pexels-photo-37828118.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400',
+    img: 'https://images.unsplash.com/photo-1572455044327-7348c1be7267?auto=format&fit=crop&h=900&w=1400&q=80',
     stats: [
       { num: '200+', label: 'Festival Events' },
       { num: '25+', label: 'Festival Types' },
